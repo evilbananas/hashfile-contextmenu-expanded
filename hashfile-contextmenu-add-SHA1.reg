@@ -1,8 +1,9 @@
 Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\*\shell\hashfileSHA1]
-@="Copy SHA&1"
+@="Get SHA&1"
+"Icon"="powershell.exe,0"
 
 [HKEY_CLASSES_ROOT\*\shell\hashfileSHA1\command]
-@="powershell -NoProfile -Command \"(Get-FileHash -Algorithm SHA1 -Path '%1').Hash | Set-Clipboard\""
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA1 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA1 copied to clipboard:`n`n$hash\\\", \\\"SHA1 Checksum\\\", 0, 64)\""
 

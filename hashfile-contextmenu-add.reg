@@ -1,20 +1,27 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileMD5]
-@="Copy MD&5"
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum]
+"MUIVerb"="Get &Checksum"
+"Icon"="powershell.exe,0"
+"SubCommands"=""
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileMD5\command]
-@="powershell -NoProfile -Command \"(Get-FileHash -Algorithm MD5 -Path '%1').Hash | Set-Clipboard\""
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell]
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileSHA1]
-@="Copy SHA&1"
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\hashfileMD5]
+"MUIVerb"="MD&5"
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileSHA1\command]
-@="powershell -NoProfile -Command \"(Get-FileHash -Algorithm SHA1 -Path '%1').Hash | Set-Clipboard\""
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\hashfileMD5\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm MD5 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"MD5 copied to clipboard:`n`n$hash\\\", \\\"MD5 Checksum\\\", 0, 64)\""
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileSHA256]
-@="Copy SHA&256"
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\hashfileSHA1]
+"MUIVerb"="SHA&1"
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileSHA256\command]
-@="powershell -NoProfile -Command \"(Get-FileHash -Algorithm SHA256 -Path '%1').Hash | Set-Clipboard\""
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\hashfileSHA1\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA1 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA1 copied to clipboard:`n`n$hash\\\", \\\"SHA1 Checksum\\\", 0, 64)\""
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\hashfileSHA256]
+"MUIVerb"="SHA&256"
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\hashfileSHA256\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA256 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA256 copied to clipboard:`n`n$hash\\\", \\\"SHA256 Checksum\\\", 0, 64)\""
 
