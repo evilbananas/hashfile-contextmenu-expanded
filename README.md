@@ -23,11 +23,11 @@ Open `hashfile-contextmenu-add.reg` file to add a "Get Checksum" menu with all h
 
 **Individual Menu Entries:**  
 Open individual files to add separate top-level menu entries:
-- `hashfile-contextmenu-add-MD5.reg` - Adds "Get MD5" menu entry
 - `hashfile-contextmenu-add-SHA1.reg` - Adds "Get SHA1" menu entry  
 - `hashfile-contextmenu-add-SHA256.reg` - Adds "Get SHA256" menu entry
 - `hashfile-contextmenu-add-SHA384.reg` - Adds "Get SHA384" menu entry
 - `hashfile-contextmenu-add-SHA512.reg` - Adds "Get SHA512" menu entry
+- `hashfile-contextmenu-add-MD5.reg` - Adds "Get MD5" menu entry
 - `hashfile-contextmenu-add-RIPEMD160.reg` - Adds "Get RIPEMD160" menu entry
 
 ## Uninstall
