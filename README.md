@@ -1,3 +1,7 @@
+# Modifications
+
+This fork gets hash values in uppercase using the PowerShell Get-FileHash command instead of the original certutil, which returned values in lowercase.
+
 # hashfile-contextmenu
 
 Add commands to get a hash string of a file to context menu of Windows Explorer.  
