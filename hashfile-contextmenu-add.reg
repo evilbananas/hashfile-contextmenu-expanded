@@ -31,16 +31,17 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\4_hashfileSHA512\command]
 @="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA512 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA512 copied to clipboard:`n`n$hash\\\", \\\"SHA512 Checksum\\\", 0, 64)\""
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\6_hashfileMD5]
+; Separator line appears before this item (CommandFlags 0x00000020)
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\5_hashfileMD5]
 "MUIVerb"="MD&5"
 "CommandFlags"=dword:00000020
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\6_hashfileMD5\command]
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\5_hashfileMD5\command]
 @="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm MD5 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"MD5 copied to clipboard:`n`n$hash\\\", \\\"MD5 Checksum\\\", 0, 64)\""
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\7_hashfileRIPEMD160]
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\6_hashfileRIPEMD160]
 "MUIVerb"="&RIPEMD160"
 
-[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\7_hashfileRIPEMD160\command]
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\6_hashfileRIPEMD160\command]
 @="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm RIPEMD160 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"RIPEMD160 copied to clipboard:`n`n$hash\\\", \\\"RIPEMD160 Checksum\\\", 0, 64)\""
 
