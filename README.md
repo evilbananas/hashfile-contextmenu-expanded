@@ -9,7 +9,7 @@ Hash Algorithms: MD5, SHA1, SHA256, SHA384, SHA512, and RIPEMD160
 
 # Modifications
 
-This fork adds support for additional hash algorithms (MD5, SHA384, SHA512, and RIPEMD160). It also gets hash values in uppercase using the PowerShell Get-FileHash command instead of the original certutil, which returned values in lowercase.
+This fork adds support for additional hash algorithms (SHA384, SHA512, and RIPEMD160). It also gets hash values in uppercase using the PowerShell Get-FileHash command instead of the original certutil, which returned values in lowercase.
 
 Additional changes:
 - Displays a popup message showing the copied hash value with algorithm confirmation
