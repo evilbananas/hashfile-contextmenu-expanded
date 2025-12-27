@@ -1,12 +1,3 @@
-# Modifications
-
-This fork gets hash values in uppercase using the PowerShell Get-FileHash command instead of the original certutil, which returned values in lowercase.
-
-Additional changes:
-- Displays a popup message showing the copied hash value with algorithm confirmation
-- Uses PowerShell icons in the context menu
-- Added SHA384, SHA512, and RIPEMD160 hash algorithms
-
 # hashfile-contextmenu-expanded
 
 Add commands to get a hash string of a file to context menu of Windows Explorer.  
@@ -15,6 +6,15 @@ The hash string is copied to clipboard and displayed in a popup message.
 ![pic](pic.png)
 
 Hash Algorithms: MD5, SHA1, SHA256, SHA384, SHA512, and RIPEMD160
+
+# Modifications
+
+This fork gets hash values in uppercase using the PowerShell Get-FileHash command instead of the original certutil, which returned values in lowercase.
+
+Additional changes:
+- Displays a popup message showing the copied hash value with algorithm confirmation
+- Uses PowerShell icons in the context menu
+- Added SHA384, SHA512, and RIPEMD160 hash algorithms
 
 ## Install
 
