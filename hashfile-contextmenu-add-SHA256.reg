@@ -4,5 +4,5 @@ Windows Registry Editor Version 5.00
 @="Copy SHA&256"
 
 [HKEY_CLASSES_ROOT\*\shell\hashfileSHA256\command]
-@="cmd /V:ON /c \"for /f \"delims=\" %%i in ('certutil -hashfile \"%1\" SHA256^|findstr -v \":\"') do @set hash=%%i&@set /p =\"!hash: =!\"<NUL|clip\""
+@="powershell -NoProfile -Command \"(Get-FileHash -Algorithm SHA256 -Path '%1').Hash | Set-Clipboard\""
 
