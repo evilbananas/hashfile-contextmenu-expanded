@@ -7,7 +7,7 @@ Additional changes:
 - Uses PowerShell icons in the context menu
 - Added SHA384, SHA512, and RIPEMD160 hash algorithms
 
-# hashfile-contextmenu
+# hashfile-contextmenu-expanded
 
 Add commands to get a hash string of a file to context menu of Windows Explorer.  
 The hash string is copied to clipboard and displayed in a popup message.
