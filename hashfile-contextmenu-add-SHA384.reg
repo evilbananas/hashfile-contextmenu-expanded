@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileSHA384]
+@="Get SHA&384"
+"Icon"="powershell.exe,0"
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileSHA384\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA384 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA384 copied to clipboard:`n`n$hash\\\", \\\"SHA384 Checksum\\\", 0, 64)\""

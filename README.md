@@ -5,6 +5,7 @@ This fork gets hash values in uppercase using the PowerShell Get-FileHash comman
 Additional changes:
 - Displays a popup message showing the copied hash value with algorithm confirmation
 - Uses PowerShell icons in the context menu
+- Added SHA384, SHA512, and RIPEMD160 hash algorithms
 
 # hashfile-contextmenu
 
@@ -13,18 +14,21 @@ The hash string is copied to clipboard and displayed in a popup message.
 
 ![pic](pic.png)
 
-Hash Algorithm: MD5, SHA1 and SHA256
+Hash Algorithms: MD5, SHA1, SHA256, SHA384, SHA512, and RIPEMD160
 
 ## Install
 
 **Cascading Menu:**  
-Open `hashfile-contextmenu-add.reg` file to add a "Get Checksum" menu with MD5, SHA1, and SHA256 as submenu options.
+Open `hashfile-contextmenu-add.reg` file to add a "Get Checksum" menu with all hash algorithms as submenu options.
 
 **Individual Menu Entries:**  
 Open individual files to add separate top-level menu entries:
 - `hashfile-contextmenu-add-MD5.reg` - Adds "Get MD5" menu entry
 - `hashfile-contextmenu-add-SHA1.reg` - Adds "Get SHA1" menu entry  
 - `hashfile-contextmenu-add-SHA256.reg` - Adds "Get SHA256" menu entry
+- `hashfile-contextmenu-add-SHA384.reg` - Adds "Get SHA384" menu entry
+- `hashfile-contextmenu-add-SHA512.reg` - Adds "Get SHA512" menu entry
+- `hashfile-contextmenu-add-RIPEMD160.reg` - Adds "Get RIPEMD160" menu entry
 
 ## Uninstall
 
