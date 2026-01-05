@@ -29,6 +29,10 @@ Open individual files to add separate top-level menu entries:
 - `hashfile-contextmenu-add-MD5.reg` - Adds "Get MD5" menu entry
 - `hashfile-contextmenu-add-RIPEMD160.reg` - Adds "Get RIPEMD160" menu entry
 
+Restart the computer, or restart the `Windows Explorer` process from the Task Manager to apply changes.
+
+<img width="621" height="566" alt="image" src="https://github.com/user-attachments/assets/17752a42-c1ba-4254-94f6-1eada247bfe5" />
+
 ## Uninstall
 
 Open `hashfile-contextmenu-remove.reg` file to remove all context menu entries.
