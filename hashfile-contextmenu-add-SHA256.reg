@@ -5,5 +5,5 @@ Windows Registry Editor Version 5.00
 "Icon"="powershell.exe,0"
 
 [HKEY_CLASSES_ROOT\*\shell\hashfileSHA256\command]
-@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA256 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA256 copied to clipboard:`n`n$hash\\\", \\\"SHA256 Checksum\\\", 0, 64)\""
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA256 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA256 copied to clipboard:`n`n$hash\\\", \\\"SHA256 Hash\\\", 0, 64)\""
 
