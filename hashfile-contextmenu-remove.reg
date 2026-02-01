@@ -6,5 +6,5 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\*\shell\hashfileSHA384]
 [-HKEY_CLASSES_ROOT\*\shell\hashfileSHA512]
 [-HKEY_CLASSES_ROOT\*\shell\hashfileRIPEMD160]
-[-HKEY_CLASSES_ROOT\*\shell\hashfileChecksum]
+[-HKEY_CLASSES_ROOT\*\shell\fileHash]
 
