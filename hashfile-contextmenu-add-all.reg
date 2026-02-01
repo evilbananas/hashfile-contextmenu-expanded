@@ -1,0 +1,47 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum]
+"MUIVerb"="Get &Hash"
+"Icon"="powershell.exe,0"
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell]
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\1_hashfileSHA1]
+"MUIVerb"="SHA&1"
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\1_hashfileSHA1\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA1 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA1 copied to clipboard:`n`n$hash\\\", \\\"SHA1 Checksum\\\", 0, 64)\""
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\2_hashfileSHA256]
+"MUIVerb"="SHA&256"
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\2_hashfileSHA256\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA256 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA256 copied to clipboard:`n`n$hash\\\", \\\"SHA256 Checksum\\\", 0, 64)\""
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\3_hashfileSHA384]
+"MUIVerb"="SHA&384"
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\3_hashfileSHA384\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA384 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA384 copied to clipboard:`n`n$hash\\\", \\\"SHA384 Checksum\\\", 0, 64)\""
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\4_hashfileSHA512]
+"MUIVerb"="SHA&512"
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\4_hashfileSHA512\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm SHA512 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"SHA512 copied to clipboard:`n`n$hash\\\", \\\"SHA512 Checksum\\\", 0, 64)\""
+
+; Separator line appears before this item (CommandFlags 0x00000020)
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\5_hashfileMD5]
+"MUIVerb"="MD&5"
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\5_hashfileMD5\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm MD5 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"MD5 copied to clipboard:`n`n$hash\\\", \\\"MD5 Checksum\\\", 0, 64)\""
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\6_hashfileRIPEMD160]
+"MUIVerb"="&RIPEMD160"
+
+[HKEY_CLASSES_ROOT\*\shell\hashfileChecksum\shell\6_hashfileRIPEMD160\command]
+@="powershell.exe -WindowStyle Hidden -NoProfile -Command \"$hash = (Get-FileHash -Algorithm RIPEMD160 -Path '%1').Hash; $hash | Set-Clipboard; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show(\\\"RIPEMD160 copied to clipboard:`n`n$hash\\\", \\\"RIPEMD160 Checksum\\\", 0, 64)\""
+
