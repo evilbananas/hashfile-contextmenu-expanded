@@ -5,6 +5,8 @@ The hash value is copied to clipboard and displayed in a popup message.
 
 ![pic](pic.png)
 
+![pic2](pic2.png)
+
 Hash Algorithms: MD5, SHA1, SHA256, SHA384, SHA512, and RIPEMD160
 
 # Modifications
