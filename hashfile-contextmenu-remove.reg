@@ -1,10 +1,10 @@
 Windows Registry Editor Version 5.00
 
-[-HKEY_CLASSES_ROOT\*\shell\hashfileMD5]
-[-HKEY_CLASSES_ROOT\*\shell\hashfileSHA1]
-[-HKEY_CLASSES_ROOT\*\shell\hashfileSHA256]
-[-HKEY_CLASSES_ROOT\*\shell\hashfileSHA384]
-[-HKEY_CLASSES_ROOT\*\shell\hashfileSHA512]
-[-HKEY_CLASSES_ROOT\*\shell\hashfileRIPEMD160]
-[-HKEY_CLASSES_ROOT\*\shell\fileHash]
+[-HKEY_CLASSES_ROOT\*\shell\hashFileMD5]
+[-HKEY_CLASSES_ROOT\*\shell\hashFileSHA1]
+[-HKEY_CLASSES_ROOT\*\shell\hashFileSHA256]
+[-HKEY_CLASSES_ROOT\*\shell\hashFileSHA384]
+[-HKEY_CLASSES_ROOT\*\shell\hashFileSHA512]
+[-HKEY_CLASSES_ROOT\*\shell\hashFileRIPEMD160]
+[-HKEY_CLASSES_ROOT\*\shell\hashFile]
 
